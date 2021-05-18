@@ -1,0 +1,33 @@
+<div class="mt-4">
+    <h3>Blog setting</h3>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">
+                    ID
+                    <a href="">
+                        <span class="oi oi-elevator">a</span>
+                    </a>
+                </th>
+                <th scope="col">
+                    Tittle
+                    <a href="">
+                        <span class="oi oi-elevator">a</span>
+                    </a>
+                </th>
+                <th scope="col">Url<span class="oi oi-elevator"></span></th>
+                <th scope="col">Summary</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each posts}}
+            <tr>
+                <th scope="row">{{this._id}}</th>
+                <td>{{this.title}}</td>
+                <td>{{this.url}}</td>
+                <td>{{this.createdAt}}</td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>
