@@ -255,8 +255,8 @@ body.wrong {
 }
 
 .play{
-  width: 400px;
-  height: 400px;
+  width: 500px;
+  height: 500px;
   border-radius: 5px;
   margin: 50px 30%;
 }
@@ -314,3 +314,30 @@ body.wrong {
   margin: auto;
 }
 
+.ranking{
+  background-color: #eeeeee;
+}
+
+.text-center{
+  text-align: center;
+}
+
+.big{
+  margin-left: 100px;
+  padding: 20px;
+  font-weight: bold;
+  background-color: #005f99;
+  border-color:  #005f99;
+}
+
+.container-blog{
+  background-color: #77acf1;
+  color: white;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border: 0px;
+}
+
+.card-body:focus{
+  outline: none
+}
