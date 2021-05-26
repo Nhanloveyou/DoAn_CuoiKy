@@ -309,3 +309,8 @@ body.wrong {
 .frame{
   width: 500px;
 }
+
+.mid{
+  margin: auto;
+}
+

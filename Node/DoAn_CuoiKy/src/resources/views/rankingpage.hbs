@@ -1,13 +1,9 @@
+
+<h1 class="hq">Bảng Xếp hạng</h1>
 {{#each users}}
 <div class="container">
-  <div class="mt-4">
-    <ul class="list-group">
-      {{!-- <th scope="row">{{sum @index 1}}</th> --}}
-      {{!-- <li class="list-group-item list-group-item-success">Name:  {{this.name}}</li>
-      <li class="list-group-item">Exp:  {{this.exp}}</li> --}}
-      
-    </ul>
-    <table >
+  <div class="mt-4 mb-4">
+    <table class="mid">
       <tr>
           <td rowspan="2" class="rank">{{sum @index 1}}</td>
           <td class="list-group-item list-group-item-success frame">Name:  {{this.name}}</td>
