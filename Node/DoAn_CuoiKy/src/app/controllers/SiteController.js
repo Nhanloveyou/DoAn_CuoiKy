@@ -22,6 +22,9 @@ class SiteController{
     homepage(req, res){
         res.render('homepage');
     }
+    rankingpage(req, res){
+        res.render('rankingpage');
+    }
 }
 
 
