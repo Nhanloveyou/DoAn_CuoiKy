@@ -296,3 +296,16 @@ body.wrong {
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
+
+.rank{
+  padding: 0px 50px;
+  background-color: #233e8b;
+  margin: 0px 30px;
+  color: white;
+  font-weight: bolder;
+  font-size: 30px;
+}
+
+.frame{
+  width: 500px;
+}
