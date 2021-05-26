@@ -7,13 +7,17 @@
 /* * {
   box-sizing: border-box;
 } */
+@import 'fonts.css';
+
 
 *, *::before, *::after {
   box-sizing: border-box;
-  font-family: Gotham Rounded;
+  font-family: 'Montserrat';
 }
 
 :root {
+  font-family: 'Montserrat';
+  font-size: 18px;
   --hue-neutral: 200;
   --hue-wrong: 0;
   --hue-correct: 145;
@@ -331,7 +335,7 @@ body.wrong {
 }
 
 .container-blog{
-  background-color: #77acf1;
+  background-color: #f29191;
   color: white;
   border-radius: 20px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
