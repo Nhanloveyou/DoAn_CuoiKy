@@ -27,6 +27,10 @@ class SiteController{
         res.render('courses/quiz');
     }
 
+    todo(req, res){ 
+        res.render('todo');
+    }
+
     rankingpage(req, res){
         res.render('rankingpage');
     }

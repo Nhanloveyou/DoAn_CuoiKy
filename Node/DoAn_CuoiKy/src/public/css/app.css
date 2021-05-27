@@ -423,7 +423,7 @@ body.wrong {
 }
 
 .container-blog{
-  background-color: #f29191;
+  background-color: #94d0cc;
   color: white;
   border-radius: 20px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -450,4 +450,8 @@ body.wrong {
   color: #005f99;
   font-weight: bolder;
   font-style: normal;
+}
+
+.mgt{
+  margin-top: 100px;
 }
