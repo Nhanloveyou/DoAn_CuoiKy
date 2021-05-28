@@ -18,6 +18,16 @@ const Course = new Schema({
       maxLength: 1000,
       required: true
     },
+    style:{
+      type: String,
+      maxLength: 255,
+      required: true,
+    },
+    price:{
+      type:Number,
+      maxLength: 100,
+
+    },
     videoID: {
       type: String, 
       maxLength: 255
