@@ -1,0 +1,32 @@
+<div class="mt-4">
+    <div class="row">
+        <div class="col-lg-3">
+            <a href="http://localhost:3000/quiz"><button class="btn-practice">Practice</button></a>
+        </div>
+        <div class="col-lg-9">
+            <h2>{{course.name}}</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/{{course.videoID}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p>{{course.description}}</p>
+        </div>
+    </div>
+
+<div class= "card" class="mt-4">
+    <div class="card-body">
+        <p>{{course.comment}}</p>
+    </div>
+</div>
+    {{!-- <form method="POST" action="/courses"></form>
+        <div class="form-group">
+        <label for="comment">Comment:</label>
+        <textarea class="form-control" rows="2" id="comment"></textarea>
+        <button type="submit" class="btn btn-outline-info">Gửi</button>
+        </div>
+    </form> --}}
+    <form method="POST" action="/courses/store"></form>
+        <div class="form-group">
+            <label for="comment">Bình luận</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" name="comment">
+        </div>
+        <button type="submit" class="btn btn-primary">Gửi</button>
+    </form>
+</div>
