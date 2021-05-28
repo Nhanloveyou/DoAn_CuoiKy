@@ -1,4 +1,4 @@
-const Course = require('../models/Course')
+const Course = require('../models/Course');
 const { multipleMongooseToObject } = require('../../util/mongoose');
 
 class SiteController{
@@ -33,6 +33,10 @@ class SiteController{
 
     rankingpage(req, res){
         res.render('rankingpage');
+    }
+
+    landing(req, res, next) {
+        res.send('LandingPage');
     }
 }
 

@@ -477,14 +477,39 @@ section {
   text-align: center;
   padding: 20px 0;
 }
-.quote {
-  background:#549DA0;
-  color:#FFFFFF;
-}
 
 .frame-video{
   width: 640px;
   height: 360px;
   margin-top: 40px ;
   margin-bottom: 40px;
+}
+
+.quote {
+  background:#549DA0;
+  color:#FFFFFF;
+}
+blockquote {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+blockquote p {
+  margin: 0 0 5px 0;
+  font-size: 24px;
+}
+blockquote cite {
+  font-size: 16px;
+  font-style: italic;
+}  
+blockquote cite:before {
+  content: '–';
+  margin-right: 5px;
+}
+
+.footer{
+  background: #353535;
+  padding: 32px 0;
+  text-align: center;
+  color: #868686;
 }

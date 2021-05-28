@@ -8,6 +8,7 @@ router.get('/home', siteController.homepage);
 router.get('/ranking', siteController.rankingpage);
 router.get('/quiz', siteController.quiz);
 router.get('/todo', siteController.todo)
+router.get('/', siteController.landing);
 // router.get('/', siteController.login);
 
 module.exports = router;
