@@ -1,6 +1,6 @@
-var passport = require('passport');
-var User = require('../app/models/user');
-var LocalStrategy = require('passport-local').Strategy;
+const passport = require('passport');
+const User = require('../app/models/user');
+const LocalStrategy = require('passport-local').Strategy;
 
 passport.serializeUser(function (user, done) {
     done(null, user.id);
@@ -35,6 +35,7 @@ passport.use('local.signup', new LocalStrategy({
             return done(null, false, {message: 'Email is already in use.'});
         }
         var newUser = new User();
+        newUser.name = req.body.name;
         newUser.email = email;
         newUser.password = newUser.encryptPassword(password);
         newUser.save(function(err, result) {

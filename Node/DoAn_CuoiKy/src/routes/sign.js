@@ -10,6 +10,11 @@ router.use(csrfProtection);
 
 router.get('/profile', isLoggedIn, signController.profile)
 router.get('/logout', isLoggedIn, signController.logout);
+
+router.use('/', notLoggedIn, function(req, res, next) {
+    next();
+ });
+
 router.get('/signup', signController.signup);
 router.post('/signup', passport.authenticate('local.signup', {
     successRedirect: '/user/profile',
@@ -30,14 +35,14 @@ function isLoggedIn(req, res, next) {
     if (req.isAuthenticated()) {
         return next();
     }
-    res.redirect('/');
+    res.redirect('/user/profile');
 }
 
 function notLoggedIn(req, res, next) {
     if (!req.isAuthenticated()) {
         return next();
     }
-    res.redirect('/');
+    res.redirect('/home');
 }
 
 module.exports = router;

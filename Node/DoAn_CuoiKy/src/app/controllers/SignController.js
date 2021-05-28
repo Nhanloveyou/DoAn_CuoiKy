@@ -4,12 +4,12 @@ const { mongooseToObject } = require('../../util/mongoose');
 
 class SignController{
     profile(req, res, next){
-        res.render('user/profile');
+        res.render('user/profile', {name: req.user.name} );
     }    
 
     logout(req, res, next) {
         req.logout();
-        res.redirect('/');
+        res.redirect('/user/signin');
     }
     
     signup(req, res, next) {
