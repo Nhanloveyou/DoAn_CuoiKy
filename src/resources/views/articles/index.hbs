@@ -1,0 +1,22 @@
+<div class="container">
+    <h1 class="mb-4 hq"> Write and Share Blog </h1>
+    <img src="img/Blog.gif" alt="">
+    <a href="/articles/new" class="btn btn-success big">New Article</a>
+          
+    {{#each articles}}
+      <div class="card mt-4 mb-4">
+        <div class="card-body container-blog">
+          <h4 class="card-title">{{this.title}}</h4>
+          <div class="card-subtitle text-muted mb-2">
+            {{ this.createdAt }}
+          </div>
+          <div class="card-text mb-2">{{this.description}}</div>
+          <a href="articles/{{this.slug}}" class="btn btn-primary">Read More</a>
+          <a href="articles/edit/{{this._id}}" class="btn btn-info">Edit</a>
+          <form action="/articles/{{this._id }}?_method=DELETE" method="POST" class="d-inline">
+            <button type="submit" class="btn btn-danger">Delete</button>
+          </form>
+        </div>
+      </div>
+    {{/each}}
+  </div>

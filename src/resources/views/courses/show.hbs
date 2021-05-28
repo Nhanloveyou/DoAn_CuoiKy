@@ -1,0 +1,32 @@
+<div class="mt-4">
+    <div class="row">
+        <div class="col-lg-3">
+            <a href="http://localhost:3000/quiz"><button class="btn-practice">Practice</button></a>
+        </div>
+        <div class="col-lg-9">
+            <h2 class="hq">{{course.name}}</h2>
+            <iframe class="frame-video" src="https://www.youtube.com/embed/{{course.videoID}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p>{{course.description}}</p>
+        </div>
+    </div>
+
+<section class="quote">
+  <blockquote class="container3">
+    <p>"Khóa học này cũng chất phết, nhưng tôi đề nghị nên có thêm bài giảng về xác thực quyền người dùng thì tuyệt vời."</p>
+    <cite>- CEO Trang Learn4Fun.com cho hay-</cite>
+  </blockquote>
+</section> 
+
+<div class= "card" class="mt-4">
+    <div class="card-body">
+        <p>{{course.comment}}</p>
+    </div>
+</div>
+    <form method="POST" action="/courses/store"></form>
+        <div class="form-group">
+            <label for="comment">Bình luận</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" name="comment">
+        </div>
+        <button type="submit" class="btn btn-primary">Gửi</button>
+    </form>
+</div>
