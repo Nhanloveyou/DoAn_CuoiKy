@@ -180,6 +180,10 @@ html, body{
   font-size: 1.1em !important;
 }
 
+.nav-item{
+  border-radius: 5px;
+}
+
 .nav-item:hover{
   background-color: #1eae98;
   
@@ -430,8 +434,16 @@ body.wrong {
   border: 0px;
 }
 
+/* .card-body{
+  border: none;
+} */
+
+.card{
+  border: none;
+}
+
 .card-body:focus{
-  outline: none
+  outline: none;
 }
 
 .d3{
@@ -454,4 +466,25 @@ body.wrong {
 
 .mgt{
   margin-top: 100px;
+}
+
+.container3 {
+  margin: 0 auto;
+  padding: 0 20px 0 20px;
+  max-width: 900px;
+}
+section {
+  text-align: center;
+  padding: 20px 0;
+}
+.quote {
+  background:#549DA0;
+  color:#FFFFFF;
+}
+
+.frame-video{
+  width: 640px;
+  height: 360px;
+  margin-top: 40px ;
+  margin-bottom: 40px;
 }

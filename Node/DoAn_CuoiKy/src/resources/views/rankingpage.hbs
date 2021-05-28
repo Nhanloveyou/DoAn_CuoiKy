@@ -1,5 +1,5 @@
 <div class="ranking">
-<h1 class="hq">Bảng Xếp hạng</h1>
+<h1 class="hq">Bảng Xếp Hạng</h1>
 <img class="play" src="img/ranking.svg" alt="">
 {{#each users}}
 <div class="container">
@@ -7,10 +7,10 @@
     <table class="mid">
       <tr>
           <td rowspan="2" class="rank">{{sum @index 1}}</td>
-          <td class="list-group-item list-group-item-success frame">Name:  {{this.name}}</td>
+          <td class="list-group-item list-group-item-success frame">{{this.name}}</td>
       </tr>
       <tr>
-          <td class="list-group-item frame">Exp:  {{this.exp}}</td>
+          <td class="list-group-item frame"> {{this.exp}} XP</td>
       </tr>
     </table>
   </div>
