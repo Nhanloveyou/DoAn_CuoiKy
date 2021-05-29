@@ -1,5 +1,6 @@
 <div class="mt-4">
   <h3>Khóa học của tôi</h3>
+  <a href="/me/trash/courses">Thùng rác</a>
   <table class="table mt-4">
     <thead>
       <tr>
@@ -23,6 +24,13 @@
             data-target="#delete-course-modal">Xóa</button>
         </td>
       </tr>
+      {{else}}
+      <tr>
+        <td colspan="5" class="text-center">
+          Bạn chưa đăng khóa học nào
+          <a href="/courses/create">Đăng khóa học</a>
+        </td>
+      </tr>
       {{/each}}
     </tbody>
   </table>
@@ -39,7 +47,7 @@
         </button>
       </div>
       <div class="modal-body">
-        Xóa khóa học? Bạn chắc chưa?
+        Sau khi xóa, khóa học sẽ vào thùng rác. Bạn chắc chưa?
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-primary" data-dismiss="modal">Không, đừng xóa</button>
