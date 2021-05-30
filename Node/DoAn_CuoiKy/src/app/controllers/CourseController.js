@@ -66,7 +66,7 @@ class CourseController {
             .catch(next);
     }
 
-    // [POST] /course/:id
+    // [POST] /course/:id/comments
     comment(req, res, next) {
         const comment = new Comment(req.body);
 
@@ -80,6 +80,19 @@ class CourseController {
             })
             .then(() => res.redirect('/home'))
             .catch(next);
+    }
+
+    // [POST] /course/handleFormActions
+    handleFormActions(req, res, next) {
+        switch (req.body.action) {
+            case 'delete':
+                Course.delete({ _id: { $in: req.body.courseIds } })
+                    .then(() => res.redirect('back'))
+                    .catch(next);
+                break;
+            default:
+                res.json({ message: 'Action invalid' });
+        }
     }
 }
 

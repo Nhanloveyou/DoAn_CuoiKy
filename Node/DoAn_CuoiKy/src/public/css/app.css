@@ -212,6 +212,11 @@ html, body{
   padding-bottom: 1rem;
 }
 
+.checkbox-select-all-options {
+  width: 200px;
+  margin: 0px 16px;
+}
+
 .btn-primary {
   background-color: #6648b1;
   border: 1px solid #6648b1;
