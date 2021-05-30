@@ -1,22 +1,23 @@
 const Course = require('../models/Course')
 const { mongooseToObject } = require('../../util/mongoose');
+const Comment = require('../models/comment');
 
-class CourseController{
+class CourseController {
     //[GET] /course/:slug
-    show(req, res, next){
-        Course.findOne({slug: req.params.slug})
+    show(req, res, next) {
+        Course.findOne({ slug: req.params.slug }).populate('comments')
             .then((course) => {
-                res.render('courses/show', {course: mongooseToObject(course)})
+                res.render('courses/show', { course: mongooseToObject(course) })
             })
             .catch(next);
     }
     //[GET] /course/create
-    create(req, res, next){
+    create(req, res, next) {
         res.render('courses/create')
     }
 
     //[POST] /course/create
-    store (req, res, next){
+    store(req, res, next) {
         const formData = req.body;
         formData.image = `https://img.youtube.com/vi/${req.body.videoID}/sddefault.jpg`;
         const course = new Course(req.body);
@@ -24,27 +25,27 @@ class CourseController{
             .save()
             .then(() => res.redirect('/me/stored/courses'))
             .catch(error => {
-                
+
             })
-             
+
     }
 
-    edit(req, res, next){
+    edit(req, res, next) {
         Course.findById(req.params.id)
-            .then(course => res.render('courses/edit',{
+            .then(course => res.render('courses/edit', {
                 course: mongooseToObject(course)
             }))
             .catch((next));
     }
 
     //[PUT] /course/:id
-    update(req, res, next){
-        Course.updateOne( { _id: req.params.id}, req.body)
+    update(req, res, next) {
+        Course.updateOne({ _id: req.params.id }, req.body)
             .then(() => res.redirect('/me/stored/courses'))
             .catch(next);
     }
 
-    //[DELETE] /course/:id
+    // [DELETE] /course/:id
     destroy(req, res, next) {
         Course.delete({ _id: req.params.id })
             .then(() => res.redirect('back'))
@@ -52,16 +53,32 @@ class CourseController{
     }
 
     // [PATCH] /courses/:id/restore
-    restore(req,res,next) {
+    restore(req, res, next) {
         Course.restore({ _id: req.params.id })
             .then(() => res.redirect('back'))
             .catch(next);
     }
 
-
-    forceDestroy(req,res,next) {
+    // [DELETE] /course/:id
+    forceDestroy(req, res, next) {
         Course.deleteOne({ _id: req.params.id })
             .then(() => res.redirect('back'))
+            .catch(next);
+    }
+
+    // [POST] /course/:id
+    comment(req, res, next) {
+        const comment = new Comment(req.body);
+
+        // SAVE INSTANCE OF Comment MODEL TO DB
+        comment
+            .save()
+            .then(() => Course.findById(req.params.id))
+            .then((course) => {
+                course.comments.unshift(comment);
+                return course.save();
+            })
+            .then(() => res.redirect('/home'))
             .catch(next);
     }
 }

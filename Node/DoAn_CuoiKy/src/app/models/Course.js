@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 slug = require('mongoose-slug-generator');
 const mongooseDelete = require('mongoose-delete');
+const Comment = require('../models/comment');
 
 
 
@@ -39,9 +40,7 @@ const Course = new Schema({
     image: {
       type: String, maxLength: 255
     },
-    comment:{
-      type: String, maxLength: 255
-    },
+    comments: [{ type: Schema.Types.ObjectId, ref: 'Comment' }],
     slug: { 
       type: String, 
       slug: "name", 
