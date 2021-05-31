@@ -52,16 +52,16 @@ class CourseController {
             .catch(next);
     }
 
-    // [PATCH] /courses/:id/restore
-    restore(req, res, next) {
-        Course.restore({ _id: req.params.id })
+    // [DELETE] /course/:id
+    forceDestroy(req, res, next) {
+        Course.deleteOne({ _id: req.params.id })
             .then(() => res.redirect('back'))
             .catch(next);
     }
 
-    // [DELETE] /course/:id
-    forceDestroy(req, res, next) {
-        Course.deleteOne({ _id: req.params.id })
+    // [PATCH] /courses/:id/restore
+    restore(req, res, next) {
+        Course.restore({ _id: req.params.id })
             .then(() => res.redirect('back'))
             .catch(next);
     }
@@ -78,7 +78,7 @@ class CourseController {
                 course.comments.unshift(comment);
                 return course.save();
             })
-            .then(() => res.redirect('/home'))
+            .then(() => res.redirect('back'))
             .catch(next);
     }
 
@@ -87,6 +87,11 @@ class CourseController {
         switch (req.body.action) {
             case 'delete':
                 Course.delete({ _id: { $in: req.body.courseIds } })
+                    .then(() => res.redirect('back'))
+                    .catch(next);
+                break;
+            case 'restore':
+                Course.restore({ _id: { $in: req.body.courseIds } })
                     .then(() => res.redirect('back'))
                     .catch(next);
                 break;
