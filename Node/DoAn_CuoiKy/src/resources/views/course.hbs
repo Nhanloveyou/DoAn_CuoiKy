@@ -3,10 +3,11 @@
 </div>
 
 <img class="play" src="img/Learning.gif" alt="" >
-    <h2> Free COURSES</h1>
+{{!-- <input type="text" name="name" value="{{ searchOptions.name }}"> --}}
+    <h2 class="hq">Level Normal</h2>
     <div class="row">
-      {{#each courses}}
-      {{#unless price}}
+    {{#each courses}}
+    {{#if_eq this.level 'normal'}}
         <div class="row-sm-1 col-lg-4">
             <div class="card card-course-item">
                 <a href="/courses/{{this.slug}}">
@@ -21,33 +22,13 @@
                 </div>
             </div>
         </div>
-        {{/unless}}
-        {{/each}}   
+    {{/if_eq}}
+    {{/each}}   
     </div>
-      <h2> RENT COURSES</h1>
+    <h2 class="hq">Level advance</h2>
     <div class="row">
-      {{#each courses}}
-      {{#if price}}
-        <div class="row-sm-1 col-lg-4">
-            <div class="card card-course-item">
-                <a href="/courses/{{this.slug}}">
-                    <img class="card-img-top" src="{{this.image}}" alt="{{this.name}}">
-                </a>
-                <div class="card-body">
-                    <a href="/courses/{{this.slug}}">
-                        <h5 class="card-title">{{this.name}}</h5>
-                    </a>
-                    <p class="card-text">{{this.description}}</p>
-                    <a href="#" class="btn btn-primary">{{this.price}}</a>
-                </div>
-            </div>
-        </div>
-        {{/if}}
-        {{/each}}   
-    </div>
-    <h2> ALL COURSES</h1>
-    <div class="row">
-        {{#each courses}}
+    {{#each courses}}
+    {{#if_eq this.level 'advance'}}
         <div class="row-sm-1 col-lg-4">
             <div class="card card-course-item">
                 <a href="/courses/{{this.slug}}">
@@ -62,9 +43,7 @@
                 </div>
             </div>
         </div>
-        {{/each}}
+    {{/if_eq}}
+    {{/each}}   
     </div>
-    
-    
 </div>
-

@@ -2,6 +2,12 @@ const mongoose = require('mongoose');
 var bcrypt = require('bcrypt-nodejs');
 
 const Schema = mongoose.Schema;
+
+const ROLE = {
+    ADMIN: 'admin',
+    BASIC: 'basic'
+}
+
 const userSchema = new Schema({
     name: {
         type: String,
@@ -31,6 +37,10 @@ const userSchema = new Schema({
     },
     role: {
         type: String,
+        role: [
+            'basic',
+            'admin'
+        ],
         default: 'basic'
     }
 },{
@@ -46,3 +56,5 @@ userSchema.methods.validPassword = function(password) {
 };
 
 module.exports = mongoose.model('User', userSchema);
+// module.exports = {ROLE: ROLE}
+
