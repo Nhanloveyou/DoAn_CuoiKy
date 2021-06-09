@@ -1,9 +1,9 @@
-# Đồ án cuối kỳ môn Kỹ thuật phát triển hệ thống Web
+# Đồ án cuối kỳ môn Kỹ thuật phát triển hệ thống Web IE213.L21.CNCL
 
 ## 1. Cài đặt các thư viện cần thiết cho chương trình
 * Đầu tiên, cần cd vào thư mục trong cùng ( thư mục chứa src, có tên là DoAn_CuoiKy)
 * Tiếp đến cài đặt thư viện cho chương trình với câu lệnh: npm i
-* Chạy chương trình với câu lệnh: npm starat
+* Chạy chương trình với câu lệnh: npm start
 
 ## 2. Chạy chương trình máy học
 * Mở nhánh Machine Learning và tải về( có thể đặt cạnh thư mục chương trình trên
@@ -16,4 +16,5 @@
  
  *Lưu ý: Kiểm tra đường dẫn đến database, để đảm bảo không bị lỗi kết nối đến database*
  
+ **GVHD môn học: ThS. Võ Tấn Khoa**
  **Chương trình được thực hiện bởi: Nhân, Phương & Quyền <3**
