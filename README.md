@@ -4,6 +4,7 @@
 * Đầu tiên, cần cd vào thư mục trong cùng ( thư mục chứa src, có tên là DoAn_CuoiKy)
 * Tiếp đến cài đặt thư viện cho chương trình với câu lệnh: npm i
 * Chạy chương trình với câu lệnh: npm start
+* Khi mở chương trình ở cổng local host 3000, thêm đuôi "/home" để vào trang chủ, vì trang landing chưa được xây dựng nên không có gì hiển thị
 
 ## 2. Chạy chương trình máy học
 * Mở nhánh Machine Learning và tải về( có thể đặt cạnh thư mục chương trình trên
@@ -13,7 +14,7 @@
 '''
  * Nếu có thư viện không cài được thì thêm --force phía sau thư viện đó( có thể do thư viện chưa tối ưu nên có các tệp trùng)
  * Cuối cùng chạy chương trình ở file máy học với câu lệnh: npm start
- * Khi chạy chương trình ở cổng local host 3000, thêm đuôi "/home" để vào trang chủ, vì trang landing chưa được xây dựng nên không có gì hiển thị
+ * 
  *Lưu ý: Kiểm tra đường dẫn đến database, để đảm bảo không bị lỗi kết nối đến database*
  
  **GVHD môn học: ThS. Võ Tấn Khoa**
