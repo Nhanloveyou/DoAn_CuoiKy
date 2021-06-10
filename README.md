@@ -13,7 +13,7 @@
 '''
  * Nếu có thư viện không cài được thì thêm --force phía sau thư viện đó( có thể do thư viện chưa tối ưu nên có các tệp trùng)
  * Cuối cùng chạy chương trình ở file máy học với câu lệnh: npm start
- 
+ * Khi chạy chương trình ở cổng local host 3000, thêm đuôi "/home" để vào trang chủ, vì trang landing chưa được xây dựng nên không có gì hiển thị
  *Lưu ý: Kiểm tra đường dẫn đến database, để đảm bảo không bị lỗi kết nối đến database*
  
  **GVHD môn học: ThS. Võ Tấn Khoa**
