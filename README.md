@@ -16,6 +16,7 @@
  * Cuối cùng chạy chương trình ở file máy học với câu lệnh: npm start
  * 
  *Lưu ý: Kiểm tra đường dẫn đến database, để đảm bảo không bị lỗi kết nối đến database*
+ *Cần cài đặt mongodb và tạo tài khoản mongo Atlas để kết nối đến mongo*
  
  **GVHD môn học: ThS. Võ Tấn Khoa**
  
